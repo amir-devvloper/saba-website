@@ -741,4 +741,79 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+
+        /* =====================================================
+       REPRESENTATIVES FILTER
+       ===================================================== */
+
+       const cityFilters =
+       document.querySelectorAll(".city-filter");
+
+   const representativeCards =
+       document.querySelectorAll(".representative-card");
+
+
+   if (
+       cityFilters.length > 0 &&
+       representativeCards.length > 0
+   ) {
+
+       cityFilters.forEach(function (button) {
+
+           button.addEventListener(
+               "click",
+               function () {
+
+                   const selectedCity =
+                       button.getAttribute("data-city");
+
+
+                   /* -----------------------------------------
+                      ACTIVE BUTTON
+                      ----------------------------------------- */
+
+                   cityFilters.forEach(function (filter) {
+
+                       filter.classList.remove("active");
+
+                   });
+
+                   button.classList.add("active");
+
+
+                   /* -----------------------------------------
+                      FILTER CARDS
+                      ----------------------------------------- */
+
+                   representativeCards.forEach(
+                       function (card) {
+
+                           const cardCity =
+                               card.getAttribute("data-city");
+
+
+                           if (
+                               selectedCity === "all" ||
+                               cardCity === selectedCity
+                           ) {
+
+                               card.style.display = "";
+
+                           } else {
+
+                               card.style.display = "none";
+
+                           }
+
+                       }
+                   );
+
+               }
+           );
+
+       });
+
+   }
+
 });
+
