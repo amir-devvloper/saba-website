@@ -1,0 +1,195 @@
+@keyframes fadeInUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes fadeInRight {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes fadeInLeft {
+
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+@keyframes scaleIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero-subtitle {
+    animation: fadeInUp 0.7s ease both;
+}
+
+.hero h1 {
+    animation: fadeInUp 0.8s ease 0.15s both;
+}
+
+.hero p {
+    animation: fadeInUp 0.8s ease 0.3s both;
+}
+
+.hero-buttons {
+    animation: fadeInUp 0.8s ease 0.45s both;
+}
+
+
+/* =========================
+   Feature Cards
+========================= */
+
+.feature-card {
+    animation: fadeInUp 0.7s ease both;
+}
+
+.feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+/* =========================
+   About
+========================= */
+
+.about-text {
+    animation: fadeInRight 0.8s ease both;
+}
+
+.about-image {
+    animation: fadeInLeft 0.8s ease 0.15s both;
+}
+
+
+/* =========================
+   Services
+========================= */
+
+.service-card {
+    animation: fadeInUp 0.7s ease both;
+}
+
+.service-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+/* =========================
+   Downloads
+========================= */
+
+.download-card {
+    animation: scaleIn 0.6s ease both;
+}
+
+.download-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.download-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.download-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+
+/* =========================
+   Testimonials
+========================= */
+
+.testimonial {
+    animation: fadeIn 0.7s ease both;
+}
+
+
+/* =========================
+   Accessibility
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}

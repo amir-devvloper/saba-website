@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ثبت نام | صبا حساب</title>
+
+    <link
+        rel="icon"
+        href="../assets/images/Site-Logo.png"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../assets/css/auth.css"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- HEADER -->
+
+    <header class="auth-header">
+
+        <div class="auth-header-inner">
+
+            <a
+                href="../index.html"
+                class="auth-logo"
+            >
+
+                <img
+                    src="../assets/images/Site-Logo.png"
+                    alt="صبا حساب"
+                >
+
+            </a>
+
+            <a
+                href="../index.html"
+                class="back-home"
+            >
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+                بازگشت به سایت
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- SIGNUP -->
+
+    <main class="auth-main">
+
+        <div class="auth-box">
+
+
+            <div class="auth-icon">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+            </div>
+
+
+            <h1>
+                ایجاد حساب کاربری
+            </h1>
+
+
+            <p class="auth-subtitle">
+                برای استفاده از امکانات سایت صبا حساب ثبت نام کنید.
+            </p>
+
+
+
+            <form
+                id="signupForm"
+                class="auth-form"
+            >
+
+
+                <!-- NAME -->
+
+                <div class="form-group">
+
+                    <label for="signupName">
+
+                        <i class="fa-regular fa-user"></i>
+
+                        نام و نام خانوادگی
+
+                    </label>
+
+                    <input
+                        type="text"
+                        id="signupName"
+                        name="name"
+                        placeholder="نام و نام خانوادگی خود را وارد کنید"
+                        autocomplete="name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- MOBILE -->
+
+                <div class="form-group">
+
+                    <label for="signupMobile">
+
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+
+                        شماره موبایل
+
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="signupMobile"
+                        name="mobile"
+                        placeholder="مثلاً 09123456789"
+                        inputmode="numeric"
+                        autocomplete="tel"
+                        maxlength="11"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="signupEmail">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        ایمیل
+
+                        <span class="optional">
+                            اختیاری
+                        </span>
+
+                    </label>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        name="email"
+                        placeholder="example@email.com"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="signupPassword">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        رمز عبور
+
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="signupPassword"
+                            name="password"
+                            placeholder="حداقل 6 کاراکتر"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="signupPassword"
+                            aria-label="نمایش رمز عبور"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="signupPasswordConfirm">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        تکرار رمز عبور
+
+                    </label>
+
+                    <div class="password-box">
+
+                        <input
+                            type="password"
+                            id="signupPasswordConfirm"
+                            name="passwordConfirm"
+                            placeholder="رمز عبور را دوباره وارد کنید"
+                            autocomplete="new-password"
+                            minlength="6"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            data-target="signupPasswordConfirm"
+                            aria-label="نمایش رمز عبور"
+                        >
+
+                            <i class="fa-regular fa-eye"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <label class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="signupTerms"
+                        required
+                    >
+
+                    <span>
+
+                        قوانین و شرایط استفاده از سایت را می‌پذیرم.
+
+                    </span>
+
+                </label>
+
+
+
+                <!-- MESSAGE -->
+
+                <div
+                    id="signupMessage"
+                    class="auth-message"
+                    aria-live="polite"
+                ></div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    ایجاد حساب کاربری
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- LOGIN -->
+
+            <div class="auth-switch">
+
+                <span>
+                    قبلاً حساب کاربری ساخته‌اید؟
+                </span>
+
+                <a href="login.html">
+                    ورود به حساب
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <footer class="auth-footer">
+
+        © تمامی حقوق برای شرکت صبا حساب محفوظ است.
+
+    </footer>
+
+
+    <script src="../assets/js/auth.js"></script>
+</body>
+
+</html>

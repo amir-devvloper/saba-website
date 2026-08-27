@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>مدیریت درخواست‌های نمایندگی | صبا حساب</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="admin-header">
+
+    <div class="admin-header-inner">
+
+        <div class="admin-brand">
+
+            <div class="admin-logo">
+                ص
+            </div>
+
+            <div>
+
+                <h1>
+                    پنل مدیریت صبا حساب
+                </h1>
+
+                <span>
+                    مدیریت درخواست‌های نمایندگی
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="refresh-btn"
+            id="refreshBtn"
+        >
+            ↻
+            بروزرسانی
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main class="admin-main">
+
+
+    <!-- =================================================
+         STATS
+    ================================================== -->
+
+    <section class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+                📋
+            </div>
+
+            <div>
+
+                <span>
+                    کل درخواست‌ها
+                </span>
+
+                <strong id="totalCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card pending">
+
+            <div class="stat-icon">
+                ⏳
+            </div>
+
+            <div>
+
+                <span>
+                    در حال بررسی
+                </span>
+
+                <strong id="pendingCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card approved">
+
+            <div class="stat-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <span>
+                    تایید شده
+                </span>
+
+                <strong id="approvedCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="stat-card rejected">
+
+            <div class="stat-icon">
+                ✕
+            </div>
+
+            <div>
+
+                <span>
+                    رد شده
+                </span>
+
+                <strong id="rejectedCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         TOOLBAR
+    ================================================== -->
+
+    <section class="toolbar">
+
+
+        <div class="search-box">
+
+            <span>
+                🔎
+            </span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="جستجو با کد رهگیری، نام یا موبایل..."
+            >
+
+        </div>
+
+
+
+        <select id="statusFilter">
+
+            <option value="all">
+                همه وضعیت‌ها
+            </option>
+
+            <option value="در حال بررسی">
+                در حال بررسی
+            </option>
+
+            <option value="تایید شده">
+                تایید شده
+            </option>
+
+            <option value="رد شده">
+                رد شده
+            </option>
+
+        </select>
+
+
+    </section>
+
+
+
+    <!-- =================================================
+         MESSAGE
+    ================================================== -->
+
+    <div
+        id="adminMessage"
+        class="admin-message"
+    ></div>
+
+
+
+    <!-- =================================================
+         TABLE
+    ================================================== -->
+
+    <section class="requests-card">
+
+
+        <div class="requests-header">
+
+            <div>
+
+                <h2>
+                    درخواست‌ها
+                </h2>
+
+                <p id="resultCount">
+                    0 درخواست
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            کد رهگیری
+                        </th>
+
+                        <th>
+                            نام
+                        </th>
+
+                        <th>
+                            موبایل
+                        </th>
+
+                        <th>
+                            استان
+                        </th>
+
+                        <th>
+                            شهر
+                        </th>
+
+                        <th>
+                            وضعیت
+                        </th>
+
+                        <th>
+                            تاریخ
+                        </th>
+
+                        <th>
+                            عملیات
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="requestsTable">
+
+                    <tr>
+
+                        <td
+                            colspan="8"
+                            class="loading"
+                        >
+                            در حال دریافت اطلاعات...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     REQUEST MODAL
+===================================================== -->
+
+<div
+    class="modal"
+    id="requestModal"
+>
+
+
+    <div class="modal-overlay"></div>
+
+
+    <div class="modal-box">
+
+
+        <button
+            type="button"
+            class="modal-close"
+            id="modalClose"
+        >
+            ×
+        </button>
+
+
+        <div class="modal-title">
+
+            <h2>
+                جزئیات درخواست
+            </h2>
+
+            <span id="modalTracking">
+                -
+            </span>
+
+        </div>
+
+
+        <div class="details-grid">
+
+
+            <div class="detail-item">
+
+                <span>
+                    نام و نام خانوادگی
+                </span>
+
+                <strong id="detailName">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    شماره موبایل
+                </span>
+
+                <strong id="detailMobile">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    تلفن ثابت
+                </span>
+
+                <strong id="detailPhone">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    استان
+                </span>
+
+                <strong id="detailProvince">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    شهر
+                </span>
+
+                <strong id="detailCity">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    سابقه فعالیت
+                </span>
+
+                <strong id="detailExperience">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item">
+
+                <span>
+                    نوع فعالیت
+                </span>
+
+                <strong id="detailBusiness">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item full">
+
+                <span>
+                    آدرس
+                </span>
+
+                <strong id="detailAddress">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="detail-item full">
+
+                <span>
+                    توضیحات
+                </span>
+
+                <strong id="detailDescription">
+                    -
+                </strong>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="modal-actions">
+
+            <button
+                class="status-btn pending"
+                data-status="در حال بررسی"
+                id="modalPending"
+            >
+                در حال بررسی
+            </button>
+
+
+            <button
+                class="status-btn approved"
+                data-status="تایید شده"
+                id="modalApprove"
+            >
+                ✓ تایید درخواست
+            </button>
+
+
+            <button
+                class="status-btn rejected"
+                data-status="رد شده"
+                id="modalReject"
+            >
+                ✕ رد درخواست
+            </button>
+
+
+            <button
+                class="delete-btn"
+                id="modalDelete"
+            >
+                🗑 حذف درخواست
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

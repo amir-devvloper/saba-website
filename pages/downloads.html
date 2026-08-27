@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>سامانه دانلود ها | صبا حساب</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+<link rel="stylesheet" href="../css/download-filter.css">
+<link rel="stylesheet" href="../css/download.css">
+</head>
+
+<body>
+
+    <!-- ================= TOP HEADER ================= -->
+    <div class="top-header">
+        <div class="container top-header-inner">
+
+            <div class="top-right">
+                <a href="#">ورود</a>
+                <span>|</span>
+                <a href="#">عضویت</a>
+                <span>|</span>
+                <a href="../academies.html">آموزشگاه های مجاز</a>
+            </div>
+
+            <div class="top-left">
+                <a href="../index.html">صفحه اصلی</a>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ================= MAIN HEADER ================= -->
+    <header class="main-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <div class="logo-text">
+                    <strong>صبا حساب</strong>
+                    <span>نرم افزار حسابداری</span>
+                </div>
+            </a>
+
+            <nav class="navbar">
+                <ul class="main-menu">
+
+                    <li>
+                        <a href="../index.html">صفحه اصلی</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="products.html">
+                            محصولات
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">نرم افزار فروشگاهی</a></li>
+                            <li><a href="#">نرم افزار شرکتی</a></li>
+                            <li><a href="#">نرم افزار مشاغل</a></li>
+                            <li><a href="#">سخت افزار</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="services.html">
+                            خدمات
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">نصب و راه اندازی</a></li>
+                            <li><a href="#">استقرار نرم افزار</a></li>
+                            <li><a href="#">پشتیبانی</a></li>
+                            <li><a href="#">آموزش</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="customer.html">باشگاه مشتریان</a>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="#">
+                            سامانه نمایندگان
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="samane/submit.html">ثبت درخواست نمایندگی</a></li>
+                            <li><a href="samane/list.html">لیست نمایندگان رسمی</a></li>
+                            <li><a href="samane/Follow-up.html">پیگیری درخواست</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-dropdown active">
+                        <a href="downloads.html">
+                            سامانه دانلود ها
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="downloads/printer-drivers.html">درایور انواع پرینترها</a></li>
+                            <li><a href="downloads/remote-support.html">نرم افزارهای پشتیبانی از راه دور</a></li>
+                            <li><a href="downloads/utilities.html">نرم افزار های کاربردی</a></li>
+                            <li><a href="downloads/sql-server.html">نرم افزار SQL Server</a></li>
+                            <li><a href="downloads/saba-old-files.html">فایل های صبا قدیم</a></li>
+                            <li><a href="downloads/saba-new-file.html">فایل های صبا جدید</a></li>
+                            <li><a href="downloads/saba-videos.html">ویدئوهای آموزشی صبا</a></li>
+                            <li><a href="downloads/saba-android.html">نرم افزارهای اندروید صبا</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="has-dropdown">
+                        <a href="about.html">
+                            درباره ما
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">درباره ما</a></li>
+                            <li><a href="#">سفارش نرم افزار</a></li>
+                            <li><a href="#">سوالات متداول</a></li>
+                            <li><a href="#">مشتریان ما</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">تماس با ما</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="باز کردن منو">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- ================= PAGE TITLE ================= -->
+    <section class="page-title">
+        <div class="container">
+            <h1>سامانه دانلود ها</h1>
+        </div>
+    </section>
+
+
+    <!-- ================= DOWNLOADS ================= -->
+    <main class="downloads-section">
+
+        <div class="container">
+
+            <div class="download-filter-wrap">
+
+                <div class="section-heading download-heading">
+                    <span class="section-subtitle">دانلود</span>
+                    <h2>مرکز دانلود صبا حساب</h2>
+                    <p>محصول مورد نظر خود را انتخاب کنید.</p>
+                </div>
+
+
+                <!-- CSS ONLY FILTER -->
+             
+
+                <div class="downloads-grid" id="downloadsGrid">
+
+                    <!-- PRODUCT 1 -->
+                    <article class="download-card filter-driver">
+                        <div class="download-image">
+                            <img src="../assets/images/oscar.jpg" alt="درایور پرینتر Oscar">
+                            <span class="download-number">1</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>درایور پرینتر Oscar</h2>
+                            <div class="author">
+                                <i class="fa-regular fa-user"></i>
+                                <span>
+                                    نویسنده: شرکت صبا</span>
+                            </div>
+                            <p>برای دسترسی به درایور پرینتر Oscar و دریافت فایل مورد نیاز، روی ادامه مطلب کلیک کنید.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn">
+                                    <i class="fa-solid fa-download"></i>
+                                    دانلود
+                                </a>
+                                <a href="#" class="more-btn">
+                                    ادامه مطلب
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 2 -->
+                    <article class="download-card filter-driver">
+                        <div class="download-image">
+                            <img src="../assets/images/bayamax-bp-250-2.jpg" alt="درایور پرینترهای فروشگاهی">
+                            <span class="download-number">2</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>درایور پرینترهای فروشگاهی</h2>
+                            <div class="author">
+                                <i class="fa-regular fa-user"></i>
+                                <span>نویسنده: شرکت صبا
+  
+                                </span>
+                            </div>
+                            <p>درایور مورد نیاز پرینترهای فروشگاهی برای استفاده در سیستم‌های حسابداری صبا.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 3 -->
+                    <article class="download-card filter-remote">
+                        <div class="download-image">
+                            <img src="../assets/images/b350pluse.jpg" alt="درایور پرینترهای حرارتی">
+                            <span class="download-number">3</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>درایور پرینترهای حرارتی
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>دریافت درایور پرینترهای حرارتی مورد استفاده در فروشگاه‌ها و سیستم‌های فروش.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 4 -->
+                    <article class="download-card filter-remote">
+                        <div class="download-image-dor">
+                            <img src="../assets/images/dorsan.jpg" alt="dorsa">
+                            <span class="download-number">4</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>نرم افزار درسان دسک 32 بیت
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>برای دریافت نرم افزار درسان دسک 32 بیت و استفاده از خدمات پشتیبانی از راه دور، روی ادامه مطلب کلیک کنید.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 5 -->
+                    <article class="download-card filter-utility">
+                        <div class="download-image-dor">
+                            <img src="../assets/images/dorsan.jpg" alt="dorsa">
+                            <span class="download-number">5</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>نرم افزار درسان دسک 64 بیت
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>برای دریافت نرم افزار درسان دسک 64 بیت و استفاده از خدمات پشتیبانی از راه دور، روی ادامه مطلب کلیک کنید.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 6 -->
+                    <article class="download-card filter-utility">
+                        <div class="download-image">
+                            <img src="../assets/images/winrar.jpg" alt="">
+                            <span class="download-number">3</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>
+                                دانلود نرم افزار WinRAR
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>
+                                برای دسترسی به مطلب دانلود نرم افزار WinRAR با کلیک بر روی ادامه مطلب امکان مشاهده و دانلود را خواهید داشت
+
+
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 7 -->
+                    <article class="download-card filter-sql">
+                        <div class="download-image-bbc">
+                            <img src="../assets/images/SQL2014_1.png" alt="">
+                            <span class="download-number">7</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>نرم افزار SQL Server
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>فایل‌های مورد نیاز SQL Server برای استفاده در نرم افزارهای صبا حساب.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 8 -->
+                    <article class="download-card filter-sql">
+                        <div class="download-image">
+                            <img src="../assets/images/Database12.jpg" alt="">
+                            <span class="download-number">8</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>فایل های صبا قدیم
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>فایل‌ها و اطلاعات مربوط به نسخه‌های قدیمی نرم افزارهای صبا حساب.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 9 -->
+                    <article class="download-card filter-saba">
+                        <div class="download-image">
+                            <img src="../assets/images/Database12.jpg" alt="">
+                            <span class="download-number">9</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>فایل های صبا جدید
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>فایل‌ها و نسخه‌های جدید نرم افزارهای صبا حساب را از این بخش دریافت کنید.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 10 -->
+                    <article class="download-card filter-saba">
+                        <div class="download-image-dor">
+                            <img src="../assets/images/video_2 (1).jpg" alt="">
+                            <span class="download-number">10</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>آموزش نرم افزارهای صبا
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>ویدئوهای آموزشی مربوط به نرم افزارهای صبا حساب برای آشنایی و استفاده بهتر از امکانات نرم افزار.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 11 -->
+                    <article class="download-card filter-video">
+                        <div class="download-image-dor">
+                            <img src="../assets/images/video_2 (1).jpg" alt="">
+                            <span class="download-number">11</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>آموزش حسابداری صبا
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>مجموعه ویدئوهای آموزشی برای آشنایی با نحوه کار با نرم افزار و امکانات حسابداری صبا.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- PRODUCT 12 -->
+                    <article class="download-card filter-android">
+                        <div class="download-image-dor">
+                            <img src="../assets/images/OrderRegister3.png" alt="">
+                            <span class="download-number">12</span>
+                        </div>
+                        <div class="download-content">
+                            <h2>نرم افزارهای اندروید صبا
+                            </h2>
+                            <div class="author"><i class="fa-regular fa-user"></i><span>نویسنده: شرکت صبا
+                            </span></div>
+                            <p>نرم افزارهای اندرویدی صبا حساب را از این بخش دریافت و روی دستگاه اندرویدی خود نصب کنید.
+
+                            </p>
+                            <div class="download-actions">
+                                <a href="../assets/files/test.zip" class="download-btn"><i class="fa-solid fa-download"></i> دانلود</a>
+                                <a href="#" class="more-btn">ادامه مطلب <i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        صبا حساب
+                    </h3>
+
+                    <p>
+                        راهکارهای نرم افزاری حسابداری
+                        و مدیریت کسب‌وکار.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>
+                        امکانات اختصاصی
+                    </h3>
+    
+                    <ul>
+    
+                        <li>
+                            <a href="customer.html">
+                                باشگاه مشتریان
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="samane/submit.html">
+                                سامانه نمایندگان
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="downloads.html">
+                                سامانه دانلودها
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="services.html">
+                                سامانه آموزش ها
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <div class="footer-column">
+    
+                    <h3>
+                        خدمات
+                    </h3>
+    
+                    <ul>
+    
+                        <li>
+                            <a href="services.html">
+                                آموزش
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                نصب و راه اندازی
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                پشتیبانی اختصاصی
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                راه اندازی شبکه
+                            </a>
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+    
+                <div class="footer-column">
+    
+                    <h3>
+                        تماس با ما
+                    </h3>
+    
+                    <ul class="contact-list">
+    
+                        <li>
+    
+                            <strong>
+                                آدرس:
+                            </strong>
+    
+                            کرمان – خیابان استقلال کوچه شماره 11 پلاک 136
+    
+                        </li>
+    
+    
+                        <li>
+    
+                            <strong>
+                                شماره تماس:
+                            </strong>
+    
+                            32473477-32473461-32473496
+    
+                        </li>
+    
+    
+                        <li>
+    
+                            <strong>
+                                پست الکترونیکی:
+                            </strong>
+    
+                            info@sabahesab.com
+    
+                        </li>
+    
+                    </ul>
+    
+                </div>
+    
+    
+            </div>
+
+
+        <div class="copyright">
+            © تمامی حقوق مادی و معنوی این سایت متعلق به گروه صبا حساب می باشد.
+        </div>
+    </footer>
+
+
+    <button id="scrollTop" class="scroll-top" aria-label="بازگشت به بالا">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+<script src="../js/download-filter.js.js"></script>
+
+</body>
+</html>

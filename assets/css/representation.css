@@ -1,0 +1,1082 @@
+
+
+   .representation-page {
+    direction: rtl;
+    width: 100%;
+    min-height: 500px;
+    background: #ffffff;
+    color: #333333;
+    font-family: "Vazirmatn", Tahoma, Arial, sans-serif;
+}
+
+.representation-page *,
+.representation-page *::before,
+.representation-page *::after {
+    box-sizing: border-box;
+}
+
+.representation-page a {
+    text-decoration: none;
+}
+
+.representation-page button,
+.representation-page input,
+.representation-page select,
+.representation-page textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.representation-page .container {
+    width: 1200px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   PAGE TITLE
+   ========================================================= */
+
+.representation-page .page-title {
+    width: 100%;
+    padding: 55px 0 45px;
+    background: #f7f8fa;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.representation-page .page-title h1 {
+    margin: 0 0 12px;
+    color: #1d3557;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.representation-page .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    color: #777;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.representation-page .breadcrumb a {
+    color: #e63946;
+    transition: color .2s ease;
+}
+
+.representation-page .breadcrumb a:hover {
+    color: #c92f3b;
+}
+
+.representation-page .breadcrumb span {
+    color: #888;
+}
+
+
+/* =========================================================
+   COMMON SECTION HEADING
+   ========================================================= */
+
+.representation-page .section-heading {
+    margin-bottom: 30px;
+}
+
+.representation-page .section-heading h2 {
+    margin: 0 0 10px;
+    color: #1d3557;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.representation-page .section-heading p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.representation-page .section-heading.centered {
+    text-align: center;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.representation-page .btn-primary,
+.representation-page .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 0 27px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.representation-page .btn-primary {
+    border: 1px solid #e63946;
+    background: #e63946;
+    color: #ffffff;
+}
+
+.representation-page .btn-primary:hover {
+    background: #c92f3b;
+    border-color: #c92f3b;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, .18);
+}
+
+.representation-page .btn-outline {
+    border: 1px solid #e63946;
+    background: #ffffff;
+    color: #e63946;
+}
+
+.representation-page .btn-outline:hover {
+    background: #e63946;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SUBMIT PAGE
+   ========================================================= */
+
+.representation-page .representation-content {
+    width: 100%;
+    padding: 70px 0 90px;
+    background: #ffffff;
+}
+
+.representation-page .representation-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   FORM CARD
+   ========================================================= */
+
+.representation-page .representation-form-card {
+    width: 100%;
+    padding: 38px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .07);
+}
+
+
+/* =========================================================
+   FORM
+   ========================================================= */
+
+.representation-page .representation-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.representation-page .form-group {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.representation-page .form-group-full {
+    grid-column: 1 / -1;
+}
+
+.representation-page .form-group label {
+    display: block;
+
+    margin: 0 0 8px;
+
+    color: #333333;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.8;
+}
+
+.representation-page .form-group label span {
+    color: #e63946;
+    margin-right: 2px;
+}
+
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.representation-page .form-group input,
+.representation-page .form-group select,
+.representation-page .form-group textarea {
+    width: 100%;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #333333;
+
+    font-size: 14px;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.representation-page .form-group input,
+.representation-page .form-group select {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.representation-page .form-group textarea {
+    min-height: 120px;
+    padding: 12px 14px;
+
+    resize: vertical;
+
+    line-height: 2;
+}
+
+.representation-page .form-group input::placeholder,
+.representation-page .form-group textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.representation-page .form-group input:hover,
+.representation-page .form-group select:hover,
+.representation-page .form-group textarea:hover {
+    border-color: #cccccc;
+}
+
+.representation-page .form-group input:focus,
+.representation-page .form-group select:focus,
+.representation-page .form-group textarea:focus {
+    border-color: #e63946;
+
+    box-shadow:
+        0 0 0 3px rgba(230, 57, 70, .08);
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.representation-page .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+
+    cursor: pointer;
+
+    padding-left: 38px;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, #777 50%),
+        linear-gradient(135deg, #777 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 18px) 21px,
+        calc(100% - 12px) 21px;
+
+    background-size:
+        6px 6px,
+        6px 6px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* =========================================================
+   FORM MESSAGE
+   ========================================================= */
+
+.representation-page .form-message {
+    display: none;
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.representation-page .form-message.show {
+    display: block;
+}
+
+.representation-page .form-message.success {
+    background: #edf8f0;
+    border: 1px solid #b9e5c2;
+    color: #26743b;
+}
+
+.representation-page .form-message.error {
+    background: #fff0f1;
+    border: 1px solid #f1b9be;
+    color: #a5232e;
+}
+
+
+/* =========================================================
+   FORM SUBMIT
+   ========================================================= */
+
+.representation-page .form-submit {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: flex-start;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.representation-page .representation-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.representation-page .contact-card,
+.representation-page .info-card {
+    width: 100%;
+
+    padding: 27px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 25px rgba(0, 0, 0, .05);
+}
+
+.representation-page .contact-card h2,
+.representation-page .info-card h3 {
+    margin: 0 0 18px;
+
+    color: #1d3557;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.representation-page .contact-card h3 {
+    color: #e63946;
+    font-size: 16px;
+}
+
+.representation-page .contact-item {
+    padding: 14px 0;
+    border-top: 1px solid #eeeeee;
+}
+
+.representation-page .contact-item:first-of-type {
+    border-top: 0;
+}
+
+.representation-page .contact-item strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #333333;
+
+    font-size: 13px;
+}
+
+.representation-page .contact-item p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.representation-page .contact-item a {
+    color: #e63946;
+}
+
+.representation-page .info-card p {
+    margin: 0 0 20px;
+
+    color: #777777;
+
+    font-size: 13px;
+    line-height: 2.1;
+}
+
+.representation-page .info-card .btn-outline {
+    width: 100%;
+}
+
+
+/* =========================================================
+   LIST PAGE
+   ========================================================= */
+
+.representation-page .representatives-section {
+    width: 100%;
+
+    padding: 70px 0 90px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   CITY FILTER
+   ========================================================= */
+
+.representation-page .representative-cities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto 40px;
+}
+
+.representation-page .city-filter {
+    min-height: 42px;
+
+    padding: 0 17px;
+
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+
+    background: #ffffff;
+    color: #555555;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.representation-page .city-filter:hover {
+    border-color: #e63946;
+    color: #e63946;
+}
+
+.representation-page .city-filter.active {
+    border-color: #e63946;
+    background: #e63946;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   REPRESENTATIVES GRID
+   ========================================================= */
+
+.representation-page .representatives-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   REPRESENTATIVE CARD
+   ========================================================= */
+
+.representation-page .representative-card {
+    width: 100%;
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 25px rgba(0, 0, 0, .05);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.representation-page .representative-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, .09);
+}
+
+.representation-page .representative-card-header {
+    min-height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    background: #1d3557;
+}
+
+.representation-page .representative-city {
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.representation-page .representative-info {
+    padding: 20px;
+}
+
+.representation-page .representative-info p {
+    display: grid;
+
+    grid-template-columns: 125px minmax(0, 1fr);
+
+    gap: 8px;
+
+    margin: 0;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #f0f0f0;
+
+    color: #666666;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+.representation-page .representative-info p:last-child {
+    border-bottom: 0;
+}
+
+.representation-page .representative-info strong {
+    color: #333333;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOLLOW UP PAGE
+   ========================================================= */
+
+.representation-page .follow-up-section {
+    width: 100%;
+
+    padding: 75px 0 95px;
+
+    background: #ffffff;
+}
+
+.representation-page .follow-up-wrapper {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr) 330px;
+
+    gap: 30px;
+
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    align-items: start;
+}
+
+
+/* =========================================================
+   FOLLOW UP CARD
+   ========================================================= */
+
+.representation-page .follow-up-card {
+    width: 100%;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 14px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, .07);
+}
+
+.representation-page .follow-up-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, .1);
+}
+
+.representation-page .follow-up-icon span {
+    color: #e63946;
+
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.representation-page .follow-up-form {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+.representation-page .follow-up-form .form-group {
+    margin-bottom: 20px;
+}
+
+.representation-page .follow-up-submit {
+    width: 100%;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   RESULT
+   ========================================================= */
+
+.representation-page .request-result {
+    width: 100%;
+
+    margin-top: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+
+    background: #fafafa;
+}
+
+.representation-page .request-result[hidden] {
+    display: none;
+}
+
+.representation-page .result-header {
+    padding: 16px 20px;
+
+    background: #1d3557;
+}
+
+.representation-page .result-header h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.representation-page .result-body {
+    padding: 10px 20px;
+}
+
+.representation-page .result-row {
+    display: grid;
+
+    grid-template-columns: 140px minmax(0, 1fr);
+
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #e8e8e8;
+
+    color: #666666;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+.representation-page .result-row:last-child {
+    border-bottom: 0;
+}
+
+.representation-page .result-row > span {
+    color: #333333;
+    font-weight: 600;
+}
+
+.representation-page .result-row p {
+    margin: 0;
+}
+
+.representation-page .status-badge {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 3px 12px;
+
+    border-radius: 20px;
+
+    background: #fff4d9;
+    color: #9a6900;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FOLLOW UP HELP
+   ========================================================= */
+
+.representation-page .follow-up-help {
+    width: 100%;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+
+    box-shadow:
+        0 6px 25px rgba(0, 0, 0, .05);
+}
+
+.representation-page .follow-up-help h3 {
+    margin: 0 0 25px;
+
+    color: #1d3557;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.representation-page .help-step {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.representation-page .help-step > span {
+    flex: 0 0 32px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, .1);
+    color: #e63946;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.representation-page .help-step p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.representation-page .help-note {
+    margin: 25px 0;
+    padding: 16px;
+
+    border-radius: 8px;
+
+    background: #f7f8fa;
+}
+
+.representation-page .help-note strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #333333;
+
+    font-size: 13px;
+}
+
+.representation-page .help-note p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 12px;
+    line-height: 2;
+}
+
+.representation-page .follow-up-help .btn-outline {
+    width: 100%;
+}
+
+
+/* =========================================================
+   EMPTY RESULT
+   ========================================================= */
+
+#noRepresentatives {
+    width: 100%;
+    padding: 50px 20px;
+
+    color: #777777;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .representation-page .container {
+        width: 100%;
+        max-width: calc(100% - 35px);
+    }
+
+    .representation-page .representation-grid {
+        grid-template-columns:
+            minmax(0, 1fr) 300px;
+    }
+
+    .representation-page .representatives-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .representation-page .page-title {
+        padding: 42px 0 35px;
+    }
+
+    .representation-page .page-title h1 {
+        font-size: 26px;
+    }
+
+    .representation-page .representation-content,
+    .representation-page .representatives-section,
+    .representation-page .follow-up-section {
+        padding: 55px 0 70px;
+    }
+
+    .representation-page .representation-grid,
+    .representation-page .follow-up-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .representation-page .representation-sidebar {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   700px
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .representation-page .container {
+        max-width: calc(100% - 28px);
+    }
+
+    .representation-page .representation-form-card,
+    .representation-page .follow-up-card {
+        padding: 25px 20px;
+    }
+
+    .representation-page .representation-form {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .representation-page .form-group-full,
+    .representation-page .form-submit {
+        grid-column: auto;
+    }
+
+    .representation-page .representation-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .representation-page .representatives-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .representation-page .representative-info p {
+        grid-template-columns: 105px minmax(0, 1fr);
+    }
+
+}
+
+
+/* =========================================================
+   500px
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .representation-page .container {
+        max-width: calc(100% - 22px);
+    }
+
+    .representation-page .page-title {
+        padding: 30px 0;
+    }
+
+    .representation-page .page-title h1 {
+        font-size: 21px;
+    }
+
+    .representation-page .breadcrumb {
+        font-size: 12px;
+    }
+
+    .representation-page .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .representation-page .section-heading p {
+        font-size: 13px;
+    }
+
+    .representation-page .representative-cities {
+        justify-content: flex-start;
+    }
+
+    .representation-page .city-filter {
+        min-height: 38px;
+        padding: 0 12px;
+        font-size: 12px;
+    }
+
+    .representation-page .representative-info {
+        padding: 17px;
+    }
+
+    .representation-page .representative-info p {
+        display: block;
+        padding: 9px 0;
+    }
+
+    .representation-page .representative-info strong {
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    .representation-page .result-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .representation-page .btn-primary,
+    .representation-page .btn-outline {
+        width: 100%;
+    }
+
+    .representation-page .follow-up-help {
+        padding: 22px 18px;
+    }
+
+}

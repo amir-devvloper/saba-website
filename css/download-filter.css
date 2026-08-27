@@ -1,0 +1,174 @@
+
+/* =========================================================
+   DOWNLOAD FILTER
+   CSS ONLY - بدون نیاز به JS
+   ========================================================= */
+
+.download-filter-wrap {
+    width: 100%;
+}
+
+.download-heading {
+    margin-bottom: 28px;
+}
+
+.download-heading p {
+    margin: 10px auto 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ---------- FILTER BUTTONS ---------- */
+
+.download-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto 35px;
+}
+
+.download-filters input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.download-filters label {
+    min-height: 42px;
+    padding: 8px 17px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--secondary);
+
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.download-filters label i {
+    color: var(--primary);
+    transition: color .25s ease;
+}
+
+.download-filters label:hover {
+    color: var(--primary);
+    border-color: rgba(230, 57, 70, .35);
+    transform: translateY(-2px);
+}
+
+#filter-all:checked + label,
+#filter-driver:checked + label,
+#filter-remote:checked + label,
+#filter-utility:checked + label,
+#filter-sql:checked + label,
+#filter-saba:checked + label,
+#filter-video:checked + label,
+#filter-android:checked + label {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    box-shadow: 0 7px 20px rgba(230, 57, 70, .22);
+}
+
+#filter-all:checked + label i,
+#filter-driver:checked + label i,
+#filter-remote:checked + label i,
+#filter-utility:checked + label i,
+#filter-sql:checked + label i,
+#filter-saba:checked + label i,
+#filter-video:checked + label i,
+#filter-android:checked + label i {
+    color: #fff;
+}
+
+
+/* ---------- FILTER ANIMATION ---------- */
+
+@keyframes downloadCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.download-card {
+    animation: downloadCardIn .45s ease both;
+}
+
+
+/* ---------- CSS-ONLY FILTER LOGIC ---------- */
+
+/* ابتدا همه محصولات دیده می‌شوند */
+.download-card {
+    display: flex;
+}
+
+/* درایورها */
+#filter-driver:checked ~ .downloads-grid .download-card:not(.filter-driver),
+#filter-remote:checked ~ .downloads-grid .download-card:not(.filter-remote),
+#filter-utility:checked ~ .downloads-grid .download-card:not(.filter-utility),
+#filter-sql:checked ~ .downloads-grid .download-card:not(.filter-sql),
+#filter-saba:checked ~ .downloads-grid .download-card:not(.filter-saba),
+#filter-video:checked ~ .downloads-grid .download-card:not(.filter-video),
+#filter-android:checked ~ .downloads-grid .download-card:not(.filter-android) {
+    display: none;
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .download-filters {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 4px 2px 10px;
+        scrollbar-width: thin;
+    }
+
+    .download-filters label {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .download-heading {
+        margin-bottom: 22px;
+    }
+
+    .download-filters {
+        margin-bottom: 28px;
+        gap: 7px;
+    }
+
+    .download-filters label {
+        min-height: 40px;
+        padding: 7px 13px;
+        font-size: 11px;
+    }
+}

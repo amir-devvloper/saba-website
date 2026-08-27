@@ -1,0 +1,506 @@
+/* =========================================
+   LOGOUT PAGE
+   ========================================= */
+
+   .logout-page {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 70px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(230, 57, 70, 0.08),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(29, 53, 87, 0.08),
+            transparent 30%
+        ),
+        #f7f8fa;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   LOGOUT CARD
+   ========================================= */
+
+.logout-card {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 50px 40px 42px;
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 2;
+
+    border: 1px solid #e8e8e8;
+
+    box-shadow:
+        0 20px 60px rgba(23, 32, 42, 0.10),
+        0 5px 20px rgba(23, 32, 42, 0.05);
+
+    animation: logoutCardShow 0.7s ease;
+}
+
+
+/* =========================================
+   ICON
+   ========================================= */
+
+.logout-icon {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(230, 57, 70, 0.08);
+
+    border: 1px solid rgba(230, 57, 70, 0.15);
+}
+
+
+.logout-icon span {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e63946;
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(230, 57, 70, 0.25);
+
+    transform: rotate(180deg);
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.logout-card h1 {
+    margin: 0 0 15px;
+
+    color: #17202a;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.logout-card p {
+    max-width: 420px;
+
+    margin: 0 auto 30px;
+
+    color: #777777;
+
+    font-size: 15px;
+
+    line-height: 2.2;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.logout-btn {
+    min-width: 230px;
+    min-height: 52px;
+
+    padding: 0 28px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #e63946,
+        #c92f3b
+    );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 22px rgba(230, 57, 70, 0.22);
+
+    transition: 0.25s ease;
+}
+
+
+.logout-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(230, 57, 70, 0.30);
+}
+
+
+.logout-btn:active {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   COUNTDOWN
+   ========================================= */
+
+.logout-countdown {
+    margin-top: 24px;
+
+    color: #999999;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+.logout-countdown span {
+    min-width: 30px;
+    height: 30px;
+
+    margin: 0 4px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #f1f3f5;
+
+    color: #1d3557;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   FOOTER
+   بر اساس HTML واقعی Logout
+   ========================================= */
+
+.footer {
+    width: 100%;
+
+    margin: 0;
+    padding: 55px 0 0;
+
+    background: #17202a;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER CONTAINER
+   ========================================= */
+
+.footer .container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 25px;
+}
+
+
+/* =========================================
+   FOOTER CONTENT
+   ========================================= */
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr;
+
+    gap: 70px;
+
+    padding-bottom: 45px;
+}
+
+
+/* =========================================
+   FOOTER ABOUT
+   ========================================= */
+
+.footer-about h3,
+.footer-links h3 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+.footer-about p {
+    margin: 0;
+
+    color: #bfc5cc;
+
+    font-size: 14px;
+
+    line-height: 2.2;
+}
+
+
+/* =========================================
+   FOOTER LINKS
+   ========================================= */
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.footer-links a {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #bfc5cc;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.25s ease;
+}
+
+
+.footer-links a:hover {
+    color: #e63946;
+
+    transform: translateX(-5px);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+   ========================================= */
+
+.footer-bottom {
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+    text-align: center;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #929aa3;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* =========================================
+   ANIMATION
+   ========================================= */
+
+@keyframes logoutCardShow {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .logout-page {
+        min-height: calc(100vh - 130px);
+
+        padding: 45px 15px;
+    }
+
+
+    .logout-card {
+        padding: 40px 22px 35px;
+
+        border-radius: 20px;
+    }
+
+
+    .logout-icon {
+        width: 78px;
+        height: 78px;
+    }
+
+
+    .logout-icon span {
+        width: 50px;
+        height: 50px;
+
+        font-size: 26px;
+    }
+
+
+    .logout-card h1 {
+        font-size: 23px;
+    }
+
+
+    .logout-card p {
+        font-size: 14px;
+
+        line-height: 2;
+
+        margin-bottom: 25px;
+    }
+
+
+    .logout-btn {
+        width: 100%;
+
+        min-width: 0;
+
+        font-size: 14px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding-top: 40px;
+    }
+
+
+    .footer .container {
+        padding: 0 20px;
+    }
+
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-bottom: 35px;
+    }
+
+
+    .footer-about h3,
+    .footer-links h3 {
+        font-size: 17px;
+    }
+
+
+    .footer-about p,
+    .footer-links a {
+        font-size: 13px;
+    }
+
+
+    .footer-bottom {
+        padding: 18px 0;
+    }
+
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 380px) {
+
+    .logout-card {
+        padding: 35px 18px 30px;
+    }
+
+
+    .logout-card h1 {
+        font-size: 21px;
+    }
+
+
+    .logout-card p {
+        font-size: 13px;
+    }
+
+}
+
+.top-header-right {
+    cursor: pointer;
+}
