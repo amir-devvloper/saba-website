@@ -1859,6 +1859,8 @@ img {
 
         box-shadow:
             0 12px 25px rgba(0, 0, 0, 0.08);
+
+            
     }
 
     .navbar.active {
@@ -1934,6 +1936,12 @@ img {
 
     .page-title h1 {
         font-size: 27px;
+    }
+    .navbar.mobile-menu-open {
+        display: block;
+    }
+    .main-menu.mobile-menu-open {
+        display: flex;
     }
 
 }
